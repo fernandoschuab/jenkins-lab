@@ -1,0 +1,14 @@
+services:
+    app001:
+        build: .
+        image: app001-image
+        ports:
+            - "80:80"
+        volumes:
+            - ./plataforma:/var/www/html/plataforma
+        networks:
+            - rede-lab-teste-devops
+
+networks:
+    rede-lab-teste-devops:
+        external: true
